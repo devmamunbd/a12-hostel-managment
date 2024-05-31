@@ -12,7 +12,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
     <QueryClientProvider client={queryClient}>
+    <div className='w-[1150px] mx-auto'>
     <RouterProvider router={router}></RouterProvider>    
+    </div>
     </QueryClientProvider>
     </AuthProvider>
     
