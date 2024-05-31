@@ -60,7 +60,7 @@ const Navbar = () => {
    <div className="flex flex-col justify-center items-center font-semibold text-black">
    <h1>{user?.displayname ? user?.displayName : "UserName"}</h1>
      <Link to="/dashboard"><li><a>Dashboard</a></li></Link>
-    <button className="">LogOut</button>
+    <button className="btn btn-ghost">LogOut</button>
    </div>
   </ul>
 </div>

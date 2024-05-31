@@ -1,0 +1,299 @@
+[
+    {
+        "title": "Classic Pancakes",
+        "category": "Breakfast",
+        "image": "https://example.com/images/classic-pancakes.jpg",
+        "ingredients": ["Flour", "Milk", "Eggs", "Baking Powder", "Salt", "Butter", "Maple Syrup"],
+        "description": "Fluffy and golden pancakes served with butter and maple syrup.",
+        "price": 5.99,
+        "rating": 4.7,
+        "post_time": "2024-06-01T08:00:00Z",
+        "likes": 120,
+        "reviews": {
+            "user": "Alice",
+            "comment": "Absolutely delicious! Perfect start to the day.",
+            "rating": 5
+        },
+        "admin-name": "John Doe",
+        "admin-email": "john.doe@example.com"
+    },
+    {
+        "title": "Avocado Toast",
+        "category": "Breakfast",
+        "image": "https://example.com/images/avocado-toast.jpg",
+        "ingredients": ["Avocado", "Whole Grain Bread", "Lemon Juice", "Salt", "Pepper", "Chili Flakes"],
+        "description": "Creamy avocado spread on crispy whole grain bread, topped with chili flakes.",
+        "price": 7.99,
+        "rating": 4.8,
+        "post_time": "2024-06-01T08:30:00Z",
+        "likes": 200,
+        "reviews": {
+            "user": "Charlie",
+            "comment": "Healthy and delicious, love the hint of chili!",
+            "rating": 5
+        },
+        "admin-name": "Jane Smith",
+        "admin-email": "jane.smith@example.com"
+    },
+    {
+        "title": "Eggs Benedict",
+        "category": "Breakfast",
+        "image": "https://example.com/images/eggs-benedict.jpg",
+        "ingredients": ["English Muffins", "Poached Eggs", "Canadian Bacon", "Hollandaise Sauce"],
+        "description": "Classic Eggs Benedict with poached eggs and hollandaise sauce on an English muffin.",
+        "price": 9.99,
+        "rating": 4.9,
+        "post_time": "2024-06-01T09:00:00Z",
+        "likes": 150,
+        "reviews": {
+            "user": "Emma",
+            "comment": "Best Eggs Benedict I've ever had!",
+            "rating": 5
+        },
+        "admin-name": "Michael Brown",
+        "admin-email": "michael.brown@example.com"
+    },
+    {
+        "title": "Smoothie Bowl",
+        "category": "Breakfast",
+        "image": "https://example.com/images/smoothie-bowl.jpg",
+        "ingredients": ["Frozen Berries", "Banana", "Greek Yogurt", "Honey", "Granola", "Chia Seeds"],
+        "description": "Refreshing smoothie bowl topped with granola and chia seeds.",
+        "price": 6.99,
+        "rating": 4.6,
+        "post_time": "2024-06-01T09:30:00Z",
+        "likes": 180,
+        "reviews": {
+            "user": "Grace",
+            "comment": "Perfectly refreshing and healthy.",
+            "rating": 5
+        },
+        "admin-name": "Laura Wilson",
+        "admin-email": "laura.wilson@example.com"
+    },
+    {
+        "title": "Omelette",
+        "category": "Breakfast",
+        "image": "https://example.com/images/omelette.jpg",
+        "ingredients": ["Eggs", "Cheese", "Ham", "Bell Peppers", "Onions", "Salt", "Pepper"],
+        "description": "Fluffy omelette loaded with cheese, ham, and vegetables.",
+        "price": 8.49,
+        "rating": 4.7,
+        "post_time": "2024-06-01T10:00:00Z",
+        "likes": 130,
+        "reviews": {
+            "user": "Isabella",
+            "comment": "Very filling and tasty!",
+            "rating": 5
+        },
+        "admin-name": "David Johnson",
+        "admin-email": "david.johnson@example.com"
+    },
+    {
+        "title": "Breakfast Burrito",
+        "category": "Breakfast",
+        "image": "https://example.com/images/breakfast-burrito.jpg",
+        "ingredients": ["Tortilla", "Scrambled Eggs", "Sausage", "Cheese", "Salsa", "Avocado"],
+        "description": "Hearty breakfast burrito filled with scrambled eggs, sausage, and cheese.",
+        "price": 7.49,
+        "rating": 4.8,
+        "post_time": "2024-06-01T10:30:00Z",
+        "likes": 170,
+        "reviews": {
+            "user": "Kevin",
+            "comment": "A great start to the day, very satisfying.",
+            "rating": 5
+        },
+        "admin-name": "Emma White",
+        "admin-email": "emma.white@example.com"
+    },
+
+
+
+
+
+
+    {
+        "title": "Grilled Chicken Salad",
+        "category": "Salad",
+        "image": "https://example.com/images/grilled-chicken-salad.jpg",
+        "ingredients": ["Chicken breast", "Lettuce", "Tomatoes", "Cucumbers", "Olive oil", "Lemon juice"],
+        "description": "A healthy and delicious grilled chicken salad with fresh vegetables and a tangy lemon dressing.",
+        "price": 10.99,
+        "rating": 4.5,
+        "post_time": "2024-05-20T12:00:00Z",
+        "likes": 150,
+        "reviews": "john_doe: Delicious and healthy! (Rating: 5), jane_smith: Very fresh ingredients. (Rating: 4)",
+        "admin_name": "Alice Johnson",
+        "admin_email": "alice.johnson@example.com"
+      },
+      {
+        "title": "Beef Burger",
+        "category": "Main Course",
+        "image": "https://example.com/images/beef-burger.jpg",
+        "ingredients": ["Beef patty", "Brioche bun", "Lettuce", "Tomato", "Cheese", "Pickles", "Onions", "Ketchup"],
+        "description": "A juicy beef burger with fresh toppings and a soft brioche bun.",
+        "price": 8.99,
+        "rating": 4.7,
+        "post_time": "2024-05-18T14:30:00Z",
+        "likes": 200,
+        "reviews": "burger_lover: Best burger I've ever had! (Rating: 5), foodie23: Great taste and quality. (Rating: 4.5)",
+        "admin_name": "Bob Smith",
+        "admin_email": "bob.smith@example.com"
+      },
+      {
+        "title": "Vegan Buddha Bowl",
+        "category": "Vegan",
+        "image": "https://example.com/images/vegan-buddha-bowl.jpg",
+        "ingredients": ["Quinoa", "Chickpeas", "Avocado", "Spinach", "Carrots", "Tahini sauce"],
+        "description": "A nutritious and colorful vegan Buddha bowl packed with wholesome ingredients.",
+        "price": 12.50,
+        "rating": 4.8,
+        "post_time": "2024-05-15T11:00:00Z",
+        "likes": 180,
+        "reviews": "veganlife: Absolutely loved it! (Rating: 5), healthnut: Very filling and tasty. (Rating: 4.8)",
+        "admin_name": "Clara Lee",
+        "admin_email": "clara.lee@example.com"
+      },
+      {
+        "title": "Spaghetti Carbonara",
+        "category": "Pasta",
+        "image": "https://example.com/images/spaghetti-carbonara.jpg",
+        "ingredients": ["Spaghetti", "Pancetta", "Eggs", "Parmesan cheese", "Black pepper"],
+        "description": "A classic Italian pasta dish made with rich and creamy carbonara sauce.",
+        "price": 9.99,
+        "rating": 4.6,
+        "post_time": "2024-05-22T13:15:00Z",
+        "likes": 130,
+        "reviews": "italian_food_fan: Authentic taste! (Rating: 4.7), pasta_lover: Very creamy and delicious. (Rating: 4.5)",
+        "admin_name": "David Brown",
+        "admin_email": "david.brown@example.com"
+      },
+      {
+        "title": "Chicken Tacos",
+        "category": "Mexican",
+        "image": "https://example.com/images/chicken-tacos.jpg",
+        "ingredients": ["Chicken", "Taco shells", "Lettuce", "Tomato", "Cheese", "Sour cream", "Salsa"],
+        "description": "Flavorful chicken tacos with fresh toppings and homemade salsa.",
+        "price": 7.99,
+        "rating": 4.4,
+        "post_time": "2024-05-17T12:45:00Z",
+        "likes": 170,
+        "reviews": "taco_enthusiast: Very tasty and satisfying. (Rating: 4.5), spice_lover: Great flavors and spices. (Rating: 4.3)",
+        "admin_name": "Eve Davis",
+        "admin_email": "eve.davis@example.com"
+      },
+      {
+        "title": "Margherita Pizza",
+        "category": "Pizza",
+        "image": "https://example.com/images/margherita-pizza.jpg",
+        "ingredients": ["Pizza dough", "Tomato sauce", "Mozzarella cheese", "Basil", "Olive oil"],
+        "description": "A classic Margherita pizza with fresh mozzarella, basil, and tomato sauce.",
+        "price": 11.00,
+        "rating": 4.9,
+        "post_time": "2024-05-25T19:00:00Z",
+        "likes": 250,
+        "reviews": "pizza_fan: Perfectly cooked and delicious! (Rating: 5), cheese_lover: Best Margherita pizza I've had. (Rating: 4.9)",
+        "admin_name": "Frank Miller",
+        "admin_email": "frank.miller@example.com"
+      },
+
+
+
+
+      {
+        "title": "Grilled Salmon",
+        "category": "Seafood",
+        "image": "grilled_salmon.jpg",
+        "ingredients": ["Salmon", "Olive Oil", "Salt", "Pepper", "Lemon"],
+        "description": "Freshly grilled salmon seasoned with olive oil, salt, and pepper, served with a slice of lemon.",
+        "price": 18.99,
+        "rating": 4.5,
+        "post_time": "2024-06-01T12:00:00",
+        "likes": 120,
+        "reviews": "Delicious! The salmon was perfectly cooked. Great dish, loved the seasoning! One of the best grilled salmon I've had.",
+        "admin_name": "John Doe",
+        "admin_email": "john@example.com"
+      },
+      {
+        "title": "Chicken Alfredo Pasta",
+        "category": "Italian",
+        "image": "chicken_alfredo_pasta.jpg",
+        "ingredients": ["Chicken", "Pasta", "Cream", "Parmesan Cheese", "Garlic"],
+        "description": "Creamy Alfredo sauce with tender chicken breast served over pasta, sprinkled with parmesan cheese.",
+        "price": 14.99,
+        "rating": 4.8,
+        "post_time": "2024-06-01T12:15:00",
+        "likes": 150,
+        "reviews": "Absolutely delicious! Creamy and flavorful. Best Chicken Alfredo in town! I crave this dish all the time, it's addictive!",
+        "admin_name": "Jane Smith",
+        "admin_email": "jane@example.com"
+      }
+,
+{
+    "title": "Beef Stir Fry",
+    "category": "Asian",
+    "image": "beef_stir_fry.jpg",
+    "ingredients": ["Beef", "Vegetables", "Soy Sauce", "Garlic", "Ginger"],
+    "description": "Tender beef slices stir-fried with fresh vegetables in a savory soy sauce, garlic, and ginger marinade.",
+    "price": 16.99,
+    "rating": 4.3,
+    "post_time": "2024-06-01T12:30:00",
+    "likes": 100,
+    "reviews": "Amazing flavors! Loved the combination of beef and veggies. Authentic stir fry, tasted just like from a Chinese restaurant. Quick and easy meal, perfect for busy weeknights.",
+    "admin_name": "Michael Brown",
+    "admin_email": "michael@example.com"
+  }
+,
+{
+    "title": "Margherita Pizza",
+    "category": "Italian",
+    "image": "margherita_pizza.jpg",
+    "ingredients": ["Dough", "Tomatoes", "Fresh Mozzarella", "Basil", "Olive Oil"],
+    "description": "Classic Margherita pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves, drizzled with olive oil.",
+    "price": 12.99,
+    "rating": 4.7,
+    "post_time": "2024-06-01T12:45:00",
+    "likes": 180,
+    "reviews": "Simple yet delicious! Loved the freshness of the ingredients. Authentic Italian taste, reminds me of Italy! Perfect pizza for a cozy night in.",
+    "admin_name": "Emily Johnson",
+    "admin_email": "emily@example.com"
+  }
+,
+
+{
+    "title": "Vegetable Curry",
+    "category": "Indian",
+    "image": "vegetable_curry.jpg",
+    "ingredients": ["Mixed Vegetables", "Curry Sauce", "Coconut Milk", "Spices", "Rice"],
+    "description": "Aromatic mixed vegetable curry cooked in a rich and creamy coconut milk sauce, served with fluffy basmati rice.",
+    "price": 13.99,
+    "rating": 4.6,
+    "post_time": "2024-06-01T13:00:00",
+    "likes": 160,
+    "reviews": "Delicious curry, full of flavor! Perfectly spiced, not too mild, not too hot. Great vegetarian option, even for meat lovers.",
+    "admin_name": "David Wilson",
+    "admin_email": "david@example.com"
+  }
+,
+{
+    "title": "Steakhouse Burger",
+    "category": "American",
+    "image": "steakhouse_burger.jpg",
+    "ingredients": ["Beef Patty", "Burger Bun", "Lettuce", "Tomato", "Onion", "Cheese"],
+    "description": "Juicy beef patty topped with melted cheese, fresh lettuce, tomato slices, and onion rings, served in a soft burger bun.",
+    "price": 15.99,
+    "rating": 4.9,
+    "post_time": "2024-06-01T13:15:00",
+    "likes": 200,
+    "reviews": "Best burger in town, hands down! So juicy and flavorful, loved every bite. I'll definitely be coming back for more!",
+    "admin_name": "Sarah Lee",
+    "admin_email": "sarah@example.com"
+  }
+  
+      
+
+
+
+
+]
