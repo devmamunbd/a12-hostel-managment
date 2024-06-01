@@ -44,7 +44,8 @@ export const router = new createBrowserRouter([
        },
        {
         path: '/details/:id',
-        element: <ViewDetails></ViewDetails>
+        element: <ViewDetails></ViewDetails>,
+        loader: ({params})=> fetch(`http://localhost:1000/details/${params.id}`)
        }
       ]
     }

@@ -1,5 +1,6 @@
 import Banner from "./Home/Banner/Banner"
 import MealCategory from "./Home/MealCategory/MealCategory"
+import MemberShip from "./Home/MemberShip/MemberShip"
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <div className="py-10">
             <h1 className="text-center text-black font-bold text-2xl">Meals By Category</h1>
             <MealCategory></MealCategory>
+            <MemberShip></MemberShip>
         </div>
 
     </div>

@@ -14,8 +14,8 @@
             "comment": "Absolutely delicious! Perfect start to the day.",
             "rating": 5
         },
-        "admin-name": "John Doe",
-        "admin-email": "john.doe@example.com"
+        "admin_name": "John Doe",
+        "admin_email": "john.doe@example.com"
     },
     {
         "title": "Avocado Toast",
@@ -32,8 +32,8 @@
             "comment": "Healthy and delicious, love the hint of chili!",
             "rating": 5
         },
-        "admin-name": "Jane Smith",
-        "admin-email": "jane.smith@example.com"
+        "admin_name": "Jane Smith",
+        "admin_email": "jane.smith@example.com"
     },
     {
         "title": "Eggs Benedict",
@@ -50,8 +50,8 @@
             "comment": "Best Eggs Benedict I've ever had!",
             "rating": 5
         },
-        "admin-name": "Michael Brown",
-        "admin-email": "michael.brown@example.com"
+        "admin_name": "Michael Brown",
+        "admin_email": "michael.brown@example.com"
     },
     {
         "title": "Smoothie Bowl",
@@ -68,8 +68,8 @@
             "comment": "Perfectly refreshing and healthy.",
             "rating": 5
         },
-        "admin-name": "Laura Wilson",
-        "admin-email": "laura.wilson@example.com"
+        "admin_name": "Laura Wilson",
+        "admin_email": "laura.wilson@example.com"
     },
     {
         "title": "Omelette",
@@ -86,8 +86,8 @@
             "comment": "Very filling and tasty!",
             "rating": 5
         },
-        "admin-name": "David Johnson",
-        "admin-email": "david.johnson@example.com"
+        "admin_name": "David Johnson",
+        "admin_email": "david.johnson@example.com"
     },
     {
         "title": "Breakfast Burrito",
@@ -104,8 +104,8 @@
             "comment": "A great start to the day, very satisfying.",
             "rating": 5
         },
-        "admin-name": "Emma White",
-        "admin-email": "emma.white@example.com"
+        "admin_name": "Emma White",
+        "admin_email": "emma.white@example.com"
     },
 
     {
@@ -126,9 +126,13 @@
       "rating": 4.8,
       "post_time": "2024-05-20T18:30:00Z",
       "likes": 152,
-      "reviews": "The salmon was perfectly cooked and the asparagus was tender.",
-      "admin-name": "John Doe",
-      "admin-email": "john.doe@example.com"
+      "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
+      "admin_name": "John Doe",
+      "admin_email": "john.doe@example.com"
   },
   {
       "title": "Spaghetti Carbonara",
@@ -147,9 +151,13 @@
       "rating": 4.7,
       "post_time": "2024-04-15T19:00:00Z",
       "likes": 210,
-      "reviews": "Rich and creamy with the perfect amount of seasoning.",
-      "admin-name": "Jane Smith",
-      "admin-email": "jane.smith@example.com"
+      "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
+      "admin_name": "Jane Smith",
+      "admin_email": "jane.smith@example.com"
   },
   {
       "title": "Chicken Alfredo",
@@ -170,9 +178,13 @@
       "rating": 4.6,
       "post_time": "2024-03-10T18:45:00Z",
       "likes": 185,
-      "reviews": "Creamy and flavorful with perfectly cooked chicken.",
-      "admin-name": "Emily Johnson",
-      "admin-email": "emily.johnson@example.com"
+      "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
+      "admin_name": "Emily Johnson",
+      "admin_email": "emily.johnson@example.com"
   },
   {
       "title": "Beef Tacos",
@@ -192,9 +204,13 @@
       "rating": 4.5,
       "post_time": "2024-02-20T19:15:00Z",
       "likes": 172,
-      "reviews": "Great blend of spices and fresh toppings.",
-      "admin-name": "Michael Brown",
-      "admin-email": "michael.brown@example.com"
+      "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
+      "admin_name": "Michael Brown",
+      "admin_email": "michael.brown@example.com"
   },
   {
       "title": "Vegetable Stir-fry",
@@ -215,9 +231,13 @@
       "rating": 4.7,
       "post_time": "2024-01-30T18:00:00Z",
       "likes": 190,
-      "reviews": "Fresh and crunchy veggies with a delicious sauce.",
-      "admin-name": "Chris Wilson",
-      "admin-email": "chris.wilson@example.com"
+      "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
+      "admin_name": "Chris Wilson",
+      "admin_email": "chris.wilson@example.com"
   },
   {
       "title": "Shrimp Scampi",
@@ -239,9 +259,13 @@
       "rating": 4.9,
       "post_time": "2024-01-10T18:30:00Z",
       "likes": 225,
-      "reviews": "The shrimp were perfectly cooked and the sauce was divine.",
-      "admin-name": "Laura Green",
-      "admin-email": "laura.green@example.com"
+      "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
+      "admin_name": "Laura Green",
+      "admin_email": "laura.green@example.com"
   },
 
   {
@@ -254,7 +278,11 @@
     "rating": 4.5,
     "post_time": "2023-05-01T12:00:00Z",
     "likes": 150,
-    "reviews": "Delicious and healthy option for lunch!",
+    "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
     "admin_name": "John Doe",
     "admin_email": "john.doe@example.com"
 },
@@ -268,7 +296,11 @@
     "rating": 4.8,
     "post_time": "2023-05-03T13:30:00Z",
     "likes": 200,
-    "reviews": "Perfect for a light and satisfying lunch.",
+    "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
     "admin_name": "Jane Smith",
     "admin_email": "jane.smith@example.com"
 },
@@ -282,7 +314,11 @@
     "rating": 4.6,
     "post_time": "2023-05-05T14:00:00Z",
     "likes": 180,
-    "reviews": "Tasty and filling!",
+    "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
     "admin_name": "Sarah Lee",
     "admin_email": "sarah.lee@example.com"
 },
@@ -296,7 +332,11 @@
     "rating": 4.7,
     "post_time": "2023-05-07T11:45:00Z",
     "likes": 220,
-    "reviews": "A great vegetarian option!",
+    "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
     "admin_name": "Michael Brown",
     "admin_email": "michael.brown@example.com"
 },
@@ -310,7 +350,11 @@
     "rating": 4.9,
     "post_time": "2023-05-09T12:30:00Z",
     "likes": 300,
-    "reviews": "Best sushi rolls I've had!",
+    "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
     "admin_name": "Emily Davis",
     "admin_email": "emily.davis@example.com"
 },
@@ -324,7 +368,11 @@
     "rating": 4.4,
     "post_time": "2023-05-11T13:15:00Z",
     "likes": 250,
-    "reviews": "Simple and delicious.",
+    "reviews": {
+        "user": "Alice",
+        "comment": "Absolutely delicious! Perfect start to the day.",
+        "rating": 5
+    },
     "admin_name": "Chris Wilson",
     "admin_email": "chris.wilson@example.com"
 }
