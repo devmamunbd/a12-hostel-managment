@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import useAuth from "../../hooks/useAuth/useAuth"
 
 const Navbar = () => {
-    const {user} = useAuth()
+    const {user, logOut} = useAuth()
 
     const navlinks = <>
     <Link to="/"> <li><a>Home</a></li> </Link>
@@ -14,6 +14,10 @@ const Navbar = () => {
        <Link to="/register"> <li><a>Register</a></li> </Link>
        <Link to="/login"> <li><a>Login</a></li> </Link>
     </>
+
+    // const handleLogOut=()=> {
+    //   logOut()
+    // }
     
 
   return (
@@ -38,32 +42,24 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  {/* {
-    user && <div className="dropdown dropdown-end">
+  {
+    user ? <div className="dropdown dropdown-end">
     <div tabIndex={0} className="btn m-1">
       <img className="w-12 h-12 rounded-full" src={user?.photoURL ? user?.photoURL : "https://i.postimg.cc/kMKbZJFt/c-HJpdm-F0-ZS9sci9pb-WFn-ZXMvd2-Vic2l0-ZS8y-MDIz-LTAx-L3-Jt-Nj-A5-LXNvb-Glka-WNvbi13-LTAw-Mi1w-Ln-Bu-Zw.webp"} alt="" />
     </div>
     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36">
      <div className="flex flex-col justify-center items-center font-semibold text-black">
-     <h1>{user?.displayname ? user?.displayName : "UserName"}</h1>
+     <h1>{user?.displayName ? user?.displayName : "UserName"}</h1>
        <Link to="/dashboard"><li><a>Dashboard</a></li></Link>
-      <button className="">LogOut</button>
+      {/* <button onClick={handleLogOut} className="">LogOut</button> */}
      </div>
     </ul>
+  </div> :
+  <div>
+    <img className="w-12 h-12 rounded-full" src="https://i.postimg.cc/kMKbZJFt/c-HJpdm-F0-ZS9sci9pb-WFn-ZXMvd2-Vic2l0-ZS8y-MDIz-LTAx-L3-Jt-Nj-A5-LXNvb-Glka-WNvbi13-LTAw-Mi1w-Ln-Bu-Zw.webp" alt="" />
   </div>
-  } */}
-  <div className="dropdown dropdown-end">
-  <div tabIndex={0} className="btn m-1">
-    <img className="w-12 h-12 rounded-full" src={user?.photoURL ? user?.photoURL : "https://i.postimg.cc/kMKbZJFt/c-HJpdm-F0-ZS9sci9pb-WFn-ZXMvd2-Vic2l0-ZS8y-MDIz-LTAx-L3-Jt-Nj-A5-LXNvb-Glka-WNvbi13-LTAw-Mi1w-Ln-Bu-Zw.webp"} alt="" />
-  </div>
-  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36">
-   <div className="flex flex-col justify-center items-center font-semibold text-black">
-   <h1>{user?.displayname ? user?.displayName : "UserName"}</h1>
-     <Link to="/dashboard"><li><a>Dashboard</a></li></Link>
-    <button className="btn btn-ghost">LogOut</button>
-   </div>
-  </ul>
-</div>
+  }
+ 
   </div>
 </div>
     </div>

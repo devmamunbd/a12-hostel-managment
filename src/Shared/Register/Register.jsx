@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { useForm } from "react-hook-form"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import useAxiosPublic from "../../hooks/useAxiosPublic/useAxiosPublic"
+import useAuth from "../../hooks/useAuth/useAuth"
+import Swal from "sweetalert2"
 
 
 
@@ -8,14 +11,41 @@ import { Link } from "react-router-dom"
 
 
 const Register = () => {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm()
+    const axiosPublic = useAxiosPublic()
+    const navigate = useNavigate()
+    const {user, createUser, updateUserProfile} = useAuth()
+    const { register, reset, handleSubmit,formState: { errors }, } = useForm()
     
       const onSubmit = (data) => {
         console.log(data)
+        createUser(data.email, data.password)
+        .then(result => {
+            updateUserProfile(data.name, data.photoURL)
+            const userInfo = {
+                name: data.name, 
+                email: data.email,
+                photoURL: data.photoURL
+            }
+            axiosPublic.post('/users', userInfo)
+            .then(()=> {
+                    reset()
+                    Swal.fire({
+                        position: "top-center",
+                        icon: "success",
+                        title: "User Register Success",
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                      
+                navigate('/')
+            })
+        })
+        .catch(error => {
+            console.log(error)
+        })
+
+       
+       
       }
     
   return (
@@ -40,7 +70,7 @@ const Register = () => {
                     <div className="flex flex-col gap-1">
                     <label htmlFor="">PhotoURL</label>
                     <input className="bg-white p-2 outline-none border border-gray-300"
-                    {...register('photo')}
+                    {...register('photoURL')}
                     type="text" placeholder="PhotoURL"/>
                     </div>
                     <div className="flex flex-col gap-1">
