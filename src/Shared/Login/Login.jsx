@@ -2,6 +2,7 @@
 import { useForm } from "react-hook-form"
 import { Link, useNavigate } from "react-router-dom"
 import useAuth from "../../hooks/useAuth/useAuth";
+import Swal from "sweetalert2";
 
 
 
@@ -12,14 +13,21 @@ const Login = () => {
 
   const onSubmit = (data) => {
     console.log(data)
-    // singIn(data.email, data.password)
-    // .then(() => {
-    //   reset()
-    //   navigate('/')
-    // })
-    // .catch(error => {
-    //   console.log(error)
-    // })
+    singIn(data.email, data.password)
+    .then(() => {
+      reset()
+      Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "User Login Success",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      navigate('/')
+    })
+    .catch(error => {
+      console.log(error)
+    })
     
   }
 
