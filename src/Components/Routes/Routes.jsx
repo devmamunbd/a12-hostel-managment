@@ -8,12 +8,14 @@ import JoinUS from "../JoinUS/JoinUS";
 import Register from "../../Shared/Register/Register";
 import Login from "../../Shared/Login/Login";
 import ViewDetails from "../ViewDetails/ViewDetails";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 
 export const router = new createBrowserRouter([
     {
       path: '/',
       element: <RootLayout></RootLayout>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [ 
         {
             path: '/',
