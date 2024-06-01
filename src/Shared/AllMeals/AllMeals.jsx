@@ -14,7 +14,7 @@ const AllMeals = ({item}) => {
 		<span className="block text-xs font-medium tracking-widest uppercase dark:text-violet-600">{item.title}</span>
 		<div className="flex justify-between">
         <h2 className="text-xl font-semibold tracking-wide">Price: {item.price}</h2>
-	<p className="text-black">Rating: {item.rating}</p>
+	<p className="text-black text-xl font-semibold">Rating: {item.rating}</p>
         </div>
 	</div>
     <Link to={`/details/${item._id}`}><button className="w-full bg-blue-500 text-white font-semibold py-2">View Details</button></Link>
