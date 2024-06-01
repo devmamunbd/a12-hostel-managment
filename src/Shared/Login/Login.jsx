@@ -3,10 +3,12 @@ import { useForm } from "react-hook-form"
 import { Link, useNavigate } from "react-router-dom"
 import useAuth from "../../hooks/useAuth/useAuth";
 import Swal from "sweetalert2";
+import { useState } from "react";
 
 
 
 const Login = () => {
+  const {googleLogin} = useAuth()
   const { register, reset, handleSubmit,formState: { errors }, } = useForm()
   const {singIn} = useAuth()
   const navigate = useNavigate()
@@ -29,6 +31,17 @@ const Login = () => {
       console.log(error)
     })
     
+  }
+
+
+  const handleGoogle=()=> {
+    googleLogin()
+    .then(()=> {
+      navigate('/')
+    })
+    .catch(error => {
+      console.log(error)
+    })
   }
 
   return (
@@ -62,7 +75,7 @@ const Login = () => {
         <div>
         <div className="divider divider-neutral">Or</div>
 
-          <button className="w-full py-2 font-semibold bg-blue-500 text-white">Google</button>
+          <button onClick={handleGoogle} className="w-full py-2 font-semibold bg-blue-500 text-white">Google</button>
 
         </div>
     </div>

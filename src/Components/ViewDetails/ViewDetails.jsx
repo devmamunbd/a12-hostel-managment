@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom"
+import useAuth from "../../hooks/useAuth/useAuth";
 
 const ViewDetails = () => {
-
+    const {user} = useAuth()
     const [count, setCount] = useState(0)
-  
     const loadData = useLoaderData()
     // console.log(loadData)
     const {_id, title, category, image,ingredients, description,
          price, rating, post_time, likes, reviews,  } = loadData;
-
+        
     const handleLike=()=> {
         const sum = count + 1;
         setCount(sum)
