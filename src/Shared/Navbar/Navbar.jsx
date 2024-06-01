@@ -9,7 +9,7 @@ const Navbar = () => {
     <Link to="/"> <li><a>Home</a></li> </Link>
        <Link to="/meals"> <li><a>Meals</a></li> </Link>
        <Link to="/umeals"> <li><a>Upcoming Meals</a></li> </Link>
-       <Link to="/icon"> <li><a>Notify Icon</a></li> </Link>
+       <Link to="/nicon"> <li><a>Notify Icon</a></li> </Link>
        <Link to="/joinus"> <li><a>Join Us</a></li> </Link>
        <Link to="/register"> <li><a>Register</a></li> </Link>
        <Link to="/login"> <li><a>Login</a></li> </Link>
@@ -30,7 +30,7 @@ const Navbar = () => {
 
       </ul>
     </div>
-    <a className="text-2xl font-bold">Hostel <span className="text-blue-500">Smart</span></a>
+   <Link to="/"> <a className="text-2xl font-bold">Hostel <span className="text-blue-500">Smart</span></a></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
