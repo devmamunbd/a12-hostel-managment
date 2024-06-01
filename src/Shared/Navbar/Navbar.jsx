@@ -15,9 +15,9 @@ const Navbar = () => {
        <Link to="/login"> <li><a>Login</a></li> </Link>
     </>
 
-    // const handleLogOut=()=> {
-    //   logOut()
-    // }
+    const handleLogOut=()=> {
+      logOut()
+    }
     
 
   return (
@@ -51,7 +51,7 @@ const Navbar = () => {
      <div className="flex flex-col justify-center items-center font-semibold text-black">
      <h1>{user?.displayName ? user?.displayName : "UserName"}</h1>
        <Link to="/dashboard"><li><a>Dashboard</a></li></Link>
-      {/* <button onClick={handleLogOut} className="">LogOut</button> */}
+      <button onClick={handleLogOut} className="">LogOut</button>
      </div>
     </ul>
   </div> :
