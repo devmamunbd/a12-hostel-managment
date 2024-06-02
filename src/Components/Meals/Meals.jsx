@@ -35,6 +35,9 @@ const Meals = () => {
 
     const handleSearch =e=> {
       e.preventDefault()
+      const text = e.target.search.value;
+      setSearch(text)
+      // console.log(text)
     }
 
 
@@ -44,7 +47,7 @@ const Meals = () => {
       <div className="flex justify-center gap-10 items-center">
        <form onSubmit={handleSearch}>
         <div className="flex gap-3">
-       <input className="bg-gray-50 rounded-lg p-2 outline-none border-[1px] w-64 border-gray-400" type="search" name="" id="" placeholder="Enter Meals Title"/> 
+       <input name="search" className="bg-gray-50 rounded-lg p-2 outline-none border-[1px] w-64 border-gray-400" type="text" id="search" placeholder="Enter Meals Title"/> 
         <button className="px-10 rounded-lg py-2 bg-blue-500 text-white font-semibold">Search</button>
         </div>
        </form>
