@@ -1,0 +1,202 @@
+[
+    {
+        "title": "Classic Pancake Stack",
+        "category": "Breakfast",
+        "image": "https://i.postimg.cc/Kc355fSN/images-11.jpg",
+        "ingredients": [
+            "Flour",
+            "Milk",
+            "Eggs",
+            "Butter",
+            "Maple syrup",
+            "Baking powder",
+            "Salt"
+        ],
+        "description": "Fluffy and golden pancakes stacked high, served with a generous drizzle of maple syrup and a pat of butter.",
+        "price": 8.99,
+        "rating": 4.7,
+        "post_time": "2024-06-02T07:00:00Z",
+        "likes": 140,
+        "reviews": "The pancakes were perfectly fluffy and the maple syrup added just the right amount of sweetness. A great way to start the day!",
+        "admin_name": "Alice Johnson",
+        "admin_email": "alice.johnson@example.com"
+    },
+    {
+        "title": "Avocado Toast with Poached Egg",
+        "category": "Breakfast",
+        "image": "https://i.postimg.cc/RFyLB6fK/avocado-6b1cf76.jpg",
+        "ingredients": [
+            "Whole grain bread",
+            "Avocado",
+            "Egg",
+            "Lemon juice",
+            "Red pepper flakes",
+            "Salt",
+            "Pepper"
+        ],
+        "description": "Creamy avocado spread on toasted whole grain bread, topped with a perfectly poached egg and a sprinkle of red pepper flakes.",
+        "price": 10.50,
+        "rating": 4.8,
+        "post_time": "2024-06-02T07:00:00Z",
+        "likes": 180,
+        "reviews": "The avocado toast was delicious and the poached egg was cooked to perfection. A healthy and satisfying breakfast.",
+        "admin_name": "David Smith",
+        "admin_email": "david.smith@example.com"
+    },
+    {
+        "title": "Greek Yogurt Parfait",
+        "category": "Breakfast",
+        "image": "https://i.postimg.cc/wBNrZpnW/Greek-Yogurt-Parfait-Recipe.jpg",
+        "ingredients": [
+            "Greek yogurt",
+            "Honey",
+            "Granola",
+            "Strawberries",
+            "Blueberries",
+            "Almonds"
+        ],
+        "description": "A layered parfait with creamy Greek yogurt, honey, crunchy granola, and fresh berries, topped with sliced almonds.",
+        "price": 7.50,
+        "rating": 4.6,
+        "post_time": "2024-06-02T07:00:00Z",
+        "likes": 120,
+        "reviews": "The Greek yogurt parfait was refreshing and packed with flavor. Loved the combination of granola and fresh berries.",
+        "admin_name": "Emma Brown",
+        "admin_email": "emma.brown@example.com"
+    }
+
+    ,
+    {
+        "title": "Steak and Garlic Mashed Potatoes",
+        "category": "Dinner",
+        "image": "https://i.postimg.cc/6QH8kkRv/images-10.jpg",
+        "ingredients": [
+            "Ribeye steak",
+            "Garlic",
+            "Potatoes",
+            "Butter",
+            "Cream",
+            "Green beans",
+            "Rosemary"
+        ],
+        "description": "Juicy ribeye steak served with creamy garlic mashed potatoes and a side of sautéed green beans.",
+        "price": 25.99,
+        "rating": 4.9,
+        "post_time": "2024-06-02T19:00:00Z",
+        "likes": 230,
+        "reviews": "The steak was cooked to perfection, and the garlic mashed potatoes were heavenly. Absolutely worth every penny.",
+        "admin_name": "Michael Brown",
+        "admin_email": "michael.brown@example.com"
+    },
+    {
+        "title": "Lemon Herb Salmon",
+        "category": "Dinner",
+        "image": "https://i.postimg.cc/yN76YLBy/images-9.jpg",
+        "ingredients": [
+            "Salmon fillet",
+            "Lemon",
+            "Garlic",
+            "Thyme",
+            "Asparagus",
+            "Olive oil",
+            "Parsley"
+        ],
+        "description": "Tender salmon fillet baked with lemon and herbs, served with roasted asparagus.",
+        "price": 22.50,
+        "rating": 4.8,
+        "post_time": "2024-06-02T19:00:00Z",
+        "likes": 210,
+        "reviews": "The lemon herb salmon was light, flavorful, and perfectly cooked. The roasted asparagus complemented the dish beautifully.",
+        "admin_name": "Laura White",
+        "admin_email": "laura.white@example.com"
+    },
+    {
+        "title": "Vegetable Stir-Fry with Tofu",
+        "category": "Dinner",
+        "image": "https://i.postimg.cc/jq1jQ6QR/diet-nutrition-recipes-vegetable-and-tofu-stir-fry-2721x1806-000019113552.jpg",
+        "ingredients": [
+            "Tofu",
+            "Broccoli",
+            "Bell peppers",
+            "Carrots",
+            "Soy sauce",
+            "Ginger",
+            "Garlic",
+            "Sesame oil"
+        ],
+        "description": "A colorful mix of stir-fried vegetables with tofu, seasoned with a savory soy-ginger sauce.",
+        "price": 18.99,
+        "rating": 4.6,
+        "post_time": "2024-06-02T19:00:00Z",
+        "likes": 170,
+        "reviews": "The vegetable stir-fry with tofu was fresh, vibrant, and full of flavor. A great option for a healthy dinner.",
+        "admin_name": "Sarah Green",
+        "admin_email": "sarah.green@example.com"
+    }
+    ,
+    {
+        "title": "Gourmet Sandwich Combo",
+        "category": "lunch",
+        "image": "https://i.postimg.cc/hGVmNys8/Caramelized-Ham-Swiss-Buns-EXPS-THFM22-141947-B09-23-4b.jpg",
+        "ingredients": [
+            "Whole grain bread",
+            "Grilled chicken",
+            "Avocado",
+            "Lettuce",
+            "Tomato",
+            "Swiss cheese",
+            "Mustard"
+        ],
+        "description": "A delicious gourmet sandwich combo featuring a freshly grilled chicken sandwich with avocado, lettuce, tomato, and Swiss cheese, served on whole grain bread.",
+        "price": 12.99,
+        "rating": 4.5,
+        "post_time": "2024-06-02T12:00:00Z",
+        "likes": 150,
+        "reviews": "Absolutely loved this sandwich! The ingredients were fresh and the flavors were amazing. A bit pricey, but totally worth it for the quality and taste.",
+        "admin_name": "John Doe",
+        "admin_email": "john.doe@example.com"
+    },
+    {
+        "title": "Vegetarian Buddha Bowl",
+        "category": "lunch",
+        "image": "https://i.postimg.cc/TPvLjjxK/IMG-25456.jpg",
+        "ingredients": [
+            "Quinoa",
+            "Chickpeas",
+            "Roasted vegetables",
+            "Hummus",
+            "Spinach",
+            "Tahini dressing"
+        ],
+        "description": "A wholesome and nutritious vegetarian Buddha bowl with quinoa, chickpeas, roasted vegetables, hummus, and a creamy tahini dressing.",
+        "price": 10.99,
+        "rating": 4.7,
+        "post_time": "2024-06-02T12:00:00Z",
+        "likes": 200,
+        "reviews": "This Buddha bowl is fantastic! It's healthy, filling, and the tahini dressing is to die for. Perfect for a quick and nutritious lunch. Highly recommend!",
+        "admin_name": "Jane Smith",
+        "admin_email": "jane.smith@example.com"
+    },
+    {
+        "title": "Spicy Tuna Poke Bowl",
+        "category": "lunch",
+        "image": "https://i.postimg.cc/ZRTW2TCZ/homemade-poke-bowls-with-ahi-tuna-and-vegetables-1200.jpg",
+        "ingredients": [
+            "Sushi rice",
+            "Spicy tuna",
+            "Edamame",
+            "Cucumber",
+            "Avocado",
+            "Seaweed salad",
+            "Sesame seeds"
+        ],
+        "description": "A vibrant and flavorful spicy tuna poke bowl with sushi rice, edamame, cucumber, avocado, seaweed salad, and topped with sesame seeds.",
+        "price": 13.99,
+        "rating": 4.8,
+        "post_time": "2024-06-02T12:00:00Z",
+        "likes": 180,
+        "reviews": "Best poke bowl I've had in a long time. The tuna was fresh and the spice level was just right. A must-try for poke bowl lovers. Great combination of flavors and textures.",
+        "admin_name": "Emily Johnson",
+        "admin_email": "emily.johnson@example.com"
+    }
+]

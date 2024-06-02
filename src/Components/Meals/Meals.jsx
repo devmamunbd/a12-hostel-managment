@@ -1,17 +1,21 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { useState } from "react"
 import { useEffect } from "react"
 import useAxiosPublic from './../../hooks/useAxiosPublic/useAxiosPublic';
 import MealsCart from "../../Shared/MealsCart/MealsCart";
+import useAuth from './../../hooks/useAuth/useAuth';
 
 
 
 const Meals = () => {
+  const {loading} = useAuth()
   const axiosPublic = useAxiosPublic()
   const [meals, setMeals] = useState([])
   const [allMeals, setAllMeals] = useState([])
   const [search, setSearch] = useState('')
   const [filter, setFilter] = useState([])
+  const [priceRange, setPriceRange] = useState([])
 
     useEffect(()=> {
       const getData = async()=> {
@@ -26,11 +30,11 @@ const Meals = () => {
     //filter & search
     useEffect(()=> {
       const getData = async()=> {
-        const {data} = await axiosPublic.get(`/all-meals?filter=${filter}&search=${search}`)
+        const {data} = await axiosPublic.get(`/all-meals?filter=${filter}&search=${search}&priceRange=${priceRange}`)
         setAllMeals(data)
       }
       getData()
-    },[axiosPublic, filter, search])
+    },[axiosPublic, filter, priceRange, search])
 
 
     const handleSearch =e=> {
@@ -39,10 +43,14 @@ const Meals = () => {
       setSearch(text)
       // console.log(text)
     }
+    
 
 
   return (
     <div >
+
+
+
 
       <div className="flex justify-center gap-10 items-center">
        <form onSubmit={handleSearch}>
@@ -66,17 +74,20 @@ const Meals = () => {
         </select>
 
 
-        <div className="price">
-        <details className="dropdown">
-        <summary className="m-1 btn">Filter By Price Range</summary>
-        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-lg w-52">
-          <li><a>Price</a></li>
-          <li><a>Price</a></li>
-          <li><a>Price</a></li>
+        <select 
+        onChange={e => setPriceRange(e.target.value)}
+        value={priceRange}
+        name="price"
+        id="price"
+        className="select w-full outline-none max-w-xs">
+          <option value="">Filter By Price Range</option>
+          <option value="$5 - $50">$5 - $50</option>
+          <option value="$51 - $150">$51 - $150</option>
+          <option value="$151 - $300">$151 - $300</option>
+         
+        </select>
           
-        </ul>
-      </details>
-        </div>
+       
       </div>
 
      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-24">
