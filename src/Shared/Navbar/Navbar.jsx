@@ -10,8 +10,8 @@ const Navbar = () => {
        <Link to="/meals"> <li><a>Meals</a></li> </Link>
        <Link to="/umeals"> <li><a>Upcoming Meals</a></li> </Link>
        <Link to="/nicon"> <li><a>Notify Icon</a></li> </Link>
-       <Link to="/joinus"> <li><a>Join Us</a></li> </Link>
-       <Link to="/register"> <li><a>Register</a></li> </Link>
+       {/* <Link to="/joinus"> <li><a>Join Us</a></li> </Link> */}
+       <Link to="/register"> <li><a>Join Us</a></li> </Link>
        <Link to="/login"> <li><a>Login</a></li> </Link>
     </>
 
@@ -53,7 +53,7 @@ const Navbar = () => {
     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36">
      <div className="flex flex-col justify-center items-center font-semibold text-black">
      <h1>{user?.displayName ? user?.displayName : "UserName"}</h1>
-       <Link to="/dashboard"><li><a>Dashboard</a></li></Link>
+       <Link to="/dashboard/myprofile"><li><a>Dashboard</a></li></Link>
       <button onClick={handleLogOut} className="">LogOut</button>
      </div>
     </ul>

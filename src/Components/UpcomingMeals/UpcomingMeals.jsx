@@ -12,7 +12,7 @@ const axiosPublic = useAxiosPublic()
       return res.data
     }
   })
-  console.log(meals)
+  // console.log(meals)
 
 
   return (
