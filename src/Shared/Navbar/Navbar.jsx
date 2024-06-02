@@ -34,7 +34,10 @@ const Navbar = () => {
 
       </ul>
     </div>
-   <Link to="/"> <a className="text-2xl font-bold">Hostel <span className="text-blue-500">Smart</span></a></Link>
+   <div className="">
+    <Link to="/"> <img className="w-32 h-32" src="https://i.postimg.cc/Bb9rCQSm/images-2-removebg-preview.png" alt="" /></Link>
+   {/* <Link to="/"> <a className="text-2xl font-bold">Smart <span className="text-blue-500">Hostel</span></a></Link> */}
+   </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -44,8 +47,8 @@ const Navbar = () => {
   <div className="navbar-end">
   {
     user ? <div className="dropdown dropdown-end">
-    <div tabIndex={0} className="btn m-1">
-      <img className="w-12 h-12 rounded-full" src={user?.photoURL ? user?.photoURL : "https://i.postimg.cc/kMKbZJFt/c-HJpdm-F0-ZS9sci9pb-WFn-ZXMvd2-Vic2l0-ZS8y-MDIz-LTAx-L3-Jt-Nj-A5-LXNvb-Glka-WNvbi13-LTAw-Mi1w-Ln-Bu-Zw.webp"} alt="" />
+    <div tabIndex={0} className="cursor-pointer m-1">
+      <img className="w-10 h-10 rounded-full" src={user?.photoURL ? user?.photoURL : "https://i.postimg.cc/kMKbZJFt/c-HJpdm-F0-ZS9sci9pb-WFn-ZXMvd2-Vic2l0-ZS8y-MDIz-LTAx-L3-Jt-Nj-A5-LXNvb-Glka-WNvbi13-LTAw-Mi1w-Ln-Bu-Zw.webp"} alt="" />
     </div>
     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36">
      <div className="flex flex-col justify-center items-center font-semibold text-black">
@@ -56,7 +59,7 @@ const Navbar = () => {
     </ul>
   </div> :
   <div>
-    <img className="w-12 h-12 rounded-full" src="https://i.postimg.cc/kMKbZJFt/c-HJpdm-F0-ZS9sci9pb-WFn-ZXMvd2-Vic2l0-ZS8y-MDIz-LTAx-L3-Jt-Nj-A5-LXNvb-Glka-WNvbi13-LTAw-Mi1w-Ln-Bu-Zw.webp" alt="" />
+    <img className="w-10 h-10 rounded-full" src="https://i.postimg.cc/kMKbZJFt/c-HJpdm-F0-ZS9sci9pb-WFn-ZXMvd2-Vic2l0-ZS8y-MDIz-LTAx-L3-Jt-Nj-A5-LXNvb-Glka-WNvbi13-LTAw-Mi1w-Ln-Bu-Zw.webp" alt="" />
   </div>
   }
  

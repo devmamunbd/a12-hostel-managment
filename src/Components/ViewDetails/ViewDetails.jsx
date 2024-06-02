@@ -11,10 +11,14 @@ const ViewDetails = () => {
     const {_id, title, category, image,ingredients, description,
          price, rating, post_time, likes, reviews,  } = loadData;
         
-    const handleLike=()=> {
-        const sum = count + 1;
-        setCount(sum)
-    }
+         const handleLike=()=> {
+            const sum = count + 1;
+            setCount(sum)
+        }
+    
+    // if (user) {
+    //     handleLike()
+    // }
 
 
 
