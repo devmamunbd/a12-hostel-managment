@@ -30,7 +30,7 @@ const ViewDetails = () => {
 			<img src={image} alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
 			<div className="p-6 space-y-2 lg:col-span-5">
 				<h3 className="text-2xl font-semibold sm:text-4xl"><span className="text-black font-semibold">Title: </span> {title}</h3>
-				<span className="text-xs dark:text-gray-600"><span className="text-black font-bold">Post Time:</span> {post_time}</span>
+				<span className="text-xs dark:text-gray-600"><span className="text-black font-bold">Post Time:</span> {new Date(post_time).toLocaleString()}</span>
 				<p><span className="text-black font-bold">Description:</span> {description}</p>
             <div className="flex gap-3 flex-wrap">
                 <p className="text-black font-semibold">Ingredients:</p>
