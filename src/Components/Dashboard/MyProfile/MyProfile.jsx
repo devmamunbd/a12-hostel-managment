@@ -1,16 +1,8 @@
-import { useQuery } from "@tanstack/react-query"
-import useAxiosPublic from './../../../hooks/useAxiosPublic/useAxiosPublic';
+import useAuth from "../../../hooks/useAuth/useAuth";
 
 const MyProfile = () => {
-  const axiosPublic = useAxiosPublic()
-  const {data: items} = useQuery({
-    queryKey: ['items'],
-    queryFn: async()=> {
-      const res = await axiosPublic.get('/users')
-      return res.data
-    }
-  })
-// console.log(items)
+  const {user} = useAuth()
+//  
 
   return (
     <div>
@@ -21,7 +13,6 @@ const MyProfile = () => {
     {/* head */}
     <thead>
       <tr>
-        <th>#</th>
         <th>Image</th>
         <th>Name</th>
         <th>Email</th>
@@ -29,17 +20,13 @@ const MyProfile = () => {
       </tr>
     </thead>
     <tbody>
-      {
-        items.map((item, index) =>  <tr key={item._id}>
-          <th>{index+1}</th>
-          <th><img className="w-14 h-14 rounded-lg" src={item.photoURL} alt="" /></th>
-          <td>{item.name}</td>
-          <td>{item.email}</td>
-          <td>{item.badge}</td>
-        </tr>)
-      }
-     
-     
+      
+          <th><img className="w-14 h-14 rounded-lg" src={user?.photoURL} alt="" /></th>
+          <td>{user?.displayName || user?.name}</td>
+          <td>{user?.email}</td>
+          <td>{user?.badge}</td>
+        
+
     </tbody>
   </table>
 </div>

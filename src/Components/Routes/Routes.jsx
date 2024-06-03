@@ -13,6 +13,14 @@ import MyProfile from "../Dashboard/MyProfile/MyProfile";
 import RequestMeals from "../Dashboard/RequestMeals/RequestMeals";
 import MyRiview from "../Dashboard/MyReview/MyRiview";
 import PaymentHistory from "../Dashboard/PaymentHistory/PaymentHistory";
+import PrivateRoutes from './PrivateRoutes';
+import AdminProfile from "../Dashboard/AdminProfile/AdminProfile";
+import ManageUser from './../Dashboard/ManageUser/ManageUser';
+import AddMeal from "../Dashboard/AddMeal/AddMeal";
+import AllMeal from "../Dashboard/AllMeal/AllMeal";
+import AllRiview from "../Dashboard/AllRiview/AllRiview";
+import ServeMeal from "../Dashboard/ServeMeal/ServeMeal";
+import UpComingMeals from "../Dashboard/UpComingMeals/UpComingMeals";
 
 
 export const router = new createBrowserRouter([
@@ -54,7 +62,7 @@ export const router = new createBrowserRouter([
     },
     {
       path: 'dashboard',
-      element: <Dashboard></Dashboard>,
+      element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
       children: [
 
         //user dashboard
@@ -77,6 +85,34 @@ export const router = new createBrowserRouter([
 
 
         //admin dashboard
+        {
+          path: 'adminprofile',
+          element: <AdminProfile></AdminProfile>
+        },
+        {
+          path: 'manageusers',
+          element: <ManageUser></ManageUser>
+        },
+        {
+          path: 'addmeal',
+          element: <AddMeal></AddMeal>
+        },
+        {
+          path: 'allmeal',
+          element: <AllMeal></AllMeal>
+        },
+        {
+          path: 'allriview',
+          element: <AllRiview></AllRiview>
+        },
+        {
+          path: 'servemeal',
+          element: <ServeMeal></ServeMeal>
+        },
+        {
+          path: 'upcomingmeals',
+          element: <UpComingMeals></UpComingMeals>
+        }
       ]
     }
 ])

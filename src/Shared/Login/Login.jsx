@@ -4,11 +4,13 @@ import { Link, useNavigate } from "react-router-dom"
 import useAuth from "../../hooks/useAuth/useAuth";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import useAxiosPublic from "../../hooks/useAxiosPublic/useAxiosPublic";
 
 
 
 const Login = () => {
   const {googleLogin} = useAuth()
+  const axiosPublic = useAxiosPublic()
   const { register, reset, handleSubmit,formState: { errors }, } = useForm()
   const {singIn} = useAuth()
   const navigate = useNavigate()
@@ -36,8 +38,18 @@ const Login = () => {
 
   const handleGoogle=()=> {
     googleLogin()
-    .then(()=> {
-      navigate('/')
+    .then((result)=> {
+      console.log(result.user)
+      const userInfo = {
+        name: result?.user?.displayName,
+        email: result?.user?.email,
+        photoURL: result?.user?.photoURL
+      }
+      axiosPublic.post('/users', userInfo)
+      .then(res => {
+        console.log(res.data)
+        navigate('/')
+      })
     })
     .catch(error => {
       console.log(error)
