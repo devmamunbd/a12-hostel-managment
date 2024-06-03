@@ -1,19 +1,22 @@
 /* eslint-disable no-unused-vars */
-import { useQuery } from "@tanstack/react-query";
 import { FaUser } from "react-icons/fa";
 import useAxiosSecure from "./../../../hooks/useAxiosSecure/useAxiosSecure";
 import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
 
 const ManageUser = () => {
   const axiosSucure = useAxiosSecure();
+  const [search, setSerch] = useState('')
+  const [alluser, setAllUser] = useState([])
 
-  const { data: users = [], refetch } = useQuery({
-    queryKey: ["users"],
-    queryFn: async () => {
-      const res = await axiosSucure.get(`users`);
-      return res.data;
-    },
-  });
+ 
+  useEffect(()=> {
+    const getData = async()=> {
+      const {data} = await axiosSucure.get(`/all-users?search=${search}`)
+     setAllUser(data)
+    }
+    getData()
+  },[axiosSucure, search])
 
   const handleMakeAdmin = user => {
     axiosSucure.patch(`/users/admin/${user._id}`)
@@ -27,15 +30,16 @@ const ManageUser = () => {
           showConfirmButton: false,
           timer: 1500
         });
-        refetch()
+        // refetch()
       }
     })
   };
 
-  const handleSearch = (e) => {
+  const handleSearch = e => {
     e.preventDefault();
     const text = e.target.search.value;
-    // console.log(text)
+    setSerch(text)
+    console.log(text)
   };
 
   return (
@@ -50,7 +54,7 @@ const ManageUser = () => {
               className="p-2 w-[400px] outline-none bg-slate-50 border-[1px] border-gray-400"
               type="text"
               name="search"
-              placeholder="Search With Email or Username"
+              placeholder="Search With Name or Email"
             />
             <button className="px-12 py-2 bg-blue-500 text-white font-semibold">
               Search
@@ -73,7 +77,7 @@ const ManageUser = () => {
               </tr>
             </thead>
             <tbody>
-              {users.map((user, index) => (
+              {alluser.map((user, index) => (
                 <tr key={user._id}>
                   <th>{index + 1}</th>
                   <td>{user.name}</td>
