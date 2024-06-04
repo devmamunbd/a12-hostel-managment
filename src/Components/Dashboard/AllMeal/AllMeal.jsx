@@ -78,7 +78,8 @@ const AllMeal = () => {
         <td>{meal.title}</td> 
         <td>{meal.riviews}</td> 
         <td>{meal?.admin_name?.name}</td> 
-        <td><Link><button className="btn bg-slate-200">
+
+        <td><Link to={`/dashboard/upadeMeal/${meal._id}`}><button className="btn bg-slate-200">
           <FaRegEdit  className="size-5"/>
         </button></Link></td> 
 

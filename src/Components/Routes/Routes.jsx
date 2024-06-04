@@ -22,6 +22,7 @@ import AllRiview from "../Dashboard/AllRiview/AllRiview";
 import ServeMeal from "../Dashboard/ServeMeal/ServeMeal";
 import UpComingMeals from "../Dashboard/UpComingMeals/UpComingMeals";
 import AdminRoutes from "./AdminRoutes";
+import UpdateMeal from "../Dashboard/UpdateMeal/UpdateMeal";
 
 
 export const router = new createBrowserRouter([
@@ -113,6 +114,11 @@ export const router = new createBrowserRouter([
         {
           path: 'upcomingmeals',
           element: <UpComingMeals></UpComingMeals>
+        },
+        {
+          path:'upadeMeal/:id',
+          element: <UpdateMeal></UpdateMeal>,
+          loader: ({params}) => fetch(`http://localhost:1000/mealsUpdate/${params.id}`)
         }
       ]
     }
