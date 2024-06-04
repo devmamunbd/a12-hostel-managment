@@ -21,6 +21,7 @@ import AllMeal from "../Dashboard/AllMeal/AllMeal";
 import AllRiview from "../Dashboard/AllRiview/AllRiview";
 import ServeMeal from "../Dashboard/ServeMeal/ServeMeal";
 import UpComingMeals from "../Dashboard/UpComingMeals/UpComingMeals";
+import AdminRoutes from "./AdminRoutes";
 
 
 export const router = new createBrowserRouter([
@@ -91,7 +92,7 @@ export const router = new createBrowserRouter([
         },
         {
           path: 'manageusers',
-          element: <ManageUser></ManageUser>
+          element: <AdminRoutes><ManageUser></ManageUser></AdminRoutes>
         },
         {
           path: 'addmeal',

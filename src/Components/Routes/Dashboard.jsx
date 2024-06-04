@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { Link, Outlet } from "react-router-dom"
+import useAdmin from "../../hooks/useAdmin/useAdmin";
 
 const Dashboard = () => {
 
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
 
   return (
     <div className="flex">

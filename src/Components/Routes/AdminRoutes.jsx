@@ -1,13 +1,23 @@
-// import useAuth from "../../hooks/useAuth/useAuth"
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import { Navigate, useLocation } from "react-router-dom"
+import useAdmin from "../../hooks/useAdmin/useAdmin"
+import useAuth from "../../hooks/useAuth/useAuth"
 
-// const AdminRoutes = () => {
-//     const {user, loading} = useAuth()
-//     if (condition) {
-        
-//     }
-//   return (
-//     <div>AdminRoutes</div>
-//   )
-// }
+const AdminRoutes = ({children}) => {
+  
+    const {user, loading} = useAuth()
+    const [isAdmin,isAdminLoading] = useAdmin()
+    const location = useLocation()
+    if (loading || isAdminLoading) {
+        return  <span className="loading loading-spinner loading-lg"></span>
+    }
+    if (isAdmin && user) {
+      return children
+    }
 
-// export default AdminRoutes
+
+  return <Navigate to='/login' replace></Navigate>
+}
+
+export default AdminRoutes

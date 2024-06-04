@@ -39,7 +39,7 @@ const ManageUser = () => {
     e.preventDefault();
     const text = e.target.search.value;
     setSerch(text)
-    console.log(text)
+    // console.log(text)
   };
 
   return (
