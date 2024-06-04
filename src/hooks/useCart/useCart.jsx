@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 const useCart = () => {
     const axiosPublic = useAxiosPublic()
 
-    const {data: carts=[]} = useQuery({
+    const {data: carts=[], refetch} = useQuery({
         queryKey: ['carts'],
         queryFn: async()=> {
             const res = await axiosPublic.get('/allmeals')
@@ -13,7 +13,7 @@ const useCart = () => {
     })
 
 
-  return [carts]
+  return [carts, refetch]
 }
 
 export default useCart

@@ -14,10 +14,11 @@ const AdminProfile = () => {
       const res = await axiosSecure.get(`/adminUsers/${user?.email}`)
       return res.data
     }
+    
   })
 
   const adminUser = item.filter(item => item.role === 'admin')
-  console.log(adminUser)
+  // console.log(adminUser)
 
   return (
     <div>
