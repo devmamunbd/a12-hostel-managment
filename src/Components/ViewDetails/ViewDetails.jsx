@@ -8,8 +8,8 @@ const ViewDetails = () => {
     const [count, setCount] = useState(0)
     const loadData = useLoaderData()
     // console.log(loadData)
-    const {_id, title, category, image,ingredients, description,
-         price, rating, post_time, likes, reviews,  } = loadData;
+    const {_id, title, category, image,ingradients, description,
+         price, rating, post_time, likes, riviews,  } = loadData;
         
          const handleLike=()=> {
             const sum = count + 1;
@@ -33,19 +33,19 @@ const ViewDetails = () => {
 				<span className="text-xs dark:text-gray-600"><span className="text-black font-bold">Post Time:</span> {new Date(post_time).toLocaleString()}</span>
 				<p><span className="text-black font-bold">Description:</span> {description}</p>
             <div className="flex gap-3 flex-wrap">
-                <p className="text-black font-semibold">Ingredients:</p>
-                {
+                <p className=""><span className="text-black font-semibold">Ingredients:</span> {ingradients}</p>
+                {/* {
                     ingredients.map(item => <p className="bg-green-500 px-4 py-1 rounded-full text-white" key={item}>
                        {item}
                     </p>)
-                }
+                } */}
             </div>
             <div className="flex justify-between">
                 <p><span className="text-black font-semibold">Price:</span> {price}</p>
                 <p><span className="text-black font-semibold">Rating:</span> {rating}</p>
             </div>
             <div>
-                <p><span className="text-black font-semibold">Review: {reviews.comment}</span></p>
+                <p><span className="text-black font-semibold">Review:</span> {riviews}</p>
             </div>
             <div className="flex justify-between">
                 <button onClick={()=>handleLike()} className="bg-green-500 px-10 py-3 rounded-md text-white font-bold">Like: {count}</button>
