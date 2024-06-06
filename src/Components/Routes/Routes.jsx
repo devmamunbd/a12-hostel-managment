@@ -23,6 +23,7 @@ import ServeMeal from "../Dashboard/ServeMeal/ServeMeal";
 import UpComingMeals from "../Dashboard/UpComingMeals/UpComingMeals";
 import AdminRoutes from "./AdminRoutes";
 import UpdateMeal from "../Dashboard/UpdateMeal/UpdateMeal";
+import PackageDetails from "../../Home/Home/PackageDetails/PackageDetails";
 
 
 export const router = new createBrowserRouter([
@@ -59,7 +60,12 @@ export const router = new createBrowserRouter([
         path: '/details/:id',
         element: <ViewDetails></ViewDetails>,
         loader: ({params})=> fetch(`http://localhost:1000/details/${params.id}`)
-       }
+       },
+       {
+        path: '/packageDetails/:id',
+        element: <PackageDetails></PackageDetails>,
+        loader: ({params})=> fetch(`http://localhost:1000/packageDetails/${params.id}`)
+      }
       ]
     },
     {
@@ -70,20 +76,21 @@ export const router = new createBrowserRouter([
         //user dashboard
         {
           path: 'myprofile',
-          element: <MyProfile></MyProfile>
+          element: <PrivateRoutes><MyProfile></MyProfile></PrivateRoutes>
         }, 
         {
           path: 'requestmeals', 
-          element: <RequestMeals></RequestMeals>
+          element: <PrivateRoutes><RequestMeals></RequestMeals></PrivateRoutes>
         }, 
         {
           path: 'myreview',
-          element: <MyRiview></MyRiview>
+          element: <PrivateRoutes> <MyRiview></MyRiview></PrivateRoutes>
         },
         {
           path: 'paymenthistory',
-          element: <PaymentHistory></PaymentHistory>
+          element: <PrivateRoutes> <PaymentHistory></PaymentHistory></PrivateRoutes>
         },
+       
 
 
         //admin dashboard

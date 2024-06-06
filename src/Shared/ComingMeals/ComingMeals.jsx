@@ -26,6 +26,9 @@ const ComingMeals = ({meal}) => {
             <p className="bg-blue-500 py-2 px-8 text-white rounded-full">{meal.category}</p>
             <p className="bg-blue-500 p-2 text-white rounded-full"> {new Date(post_time).toLocaleString()}</p>
           </div>
+          <div>
+            <button className="w-full bg-blue-500 mt-7 py-2 text-white font-bold">Like</button>
+          </div>
         </div>
       </div>
     </div>

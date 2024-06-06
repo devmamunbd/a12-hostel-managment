@@ -20,6 +20,8 @@ const AllMeal = () => {
     
   })
 
+  const allmeals = allMeals.sort((a,b)=> (b.likes) - (a.likes))
+
   const handleDelet=meal=> {
     Swal.fire({
       title: "Are you sure?",
@@ -73,7 +75,7 @@ const AllMeal = () => {
     </thead> 
     <tbody>
       {
-        allMeals.map((meal, index)=> <tr key={meal._id}>
+        allmeals.map((meal, index)=> <tr key={meal._id}>
         <th>{index+1}</th> 
         <td>{meal.title}</td> 
         <td>{meal.riviews}</td> 

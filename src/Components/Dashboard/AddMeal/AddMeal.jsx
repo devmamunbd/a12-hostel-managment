@@ -64,7 +64,7 @@ const AddMeal = () => {
           console.log(res.data)
           if (res.data.insertedId) {
             Swal.fire({
-              position: "top-end",
+              position: "center",
               icon: "success",
               title: "Meal Added SuccessFully",
               showConfirmButton: false,

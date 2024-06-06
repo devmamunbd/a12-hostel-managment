@@ -2,25 +2,44 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom"
 import useAuth from "../../hooks/useAuth/useAuth";
+import useAxiosPublic from "../../hooks/useAxiosPublic/useAxiosPublic";
+
+
+
 
 const ViewDetails = () => {
     const {user} = useAuth()
+    const axiosPublic = useAxiosPublic()
     const [count, setCount] = useState(0)
+    const [riviewCount, setRiviewCount] = useState(0)
     const loadData = useLoaderData()
     // console.log(loadData)
     const {_id, title, category, image,ingradients, description,
          price, rating, post_time, likes, riviews,  } = loadData;
         
-         const handleLike=()=> {
+         const handleLike=async()=> {
             const sum = count + 1;
-            setCount(sum)
+            const like= setCount(sum)
+        //    const res = await axiosPublic.put('/likes', like)
+        //     .then(res => {
+        //         console.log(res.data)
+        //         setCount(res.data.count)
+        //     })
         }
     
-    // if (user) {
-    //     handleLike()
-    // }
+       const handleReivie=()=> {
+        const sum = riviewCount +1
+        setRiviewCount(sum)
+       }
 
 
+       const handleRiviewForm=event=> {
+         event.preventDefault()
+         const form = event.target;
+         const riview = form.riview.value;
+         console.log(riview)
+
+       }
 
   return (
     <div>
@@ -32,6 +51,7 @@ const ViewDetails = () => {
 				<h3 className="text-2xl font-semibold sm:text-4xl"><span className="text-black font-semibold">Title: </span> {title}</h3>
 				<span className="text-xs dark:text-gray-600"><span className="text-black font-bold">Post Time:</span> {new Date(post_time).toLocaleString()}</span>
 				<p><span className="text-black font-bold">Description:</span> {description}</p>
+                <p className=""><span className="text-black font-semibold">likes:</span> {likes}</p>
             <div className="flex gap-3 flex-wrap">
                 <p className=""><span className="text-black font-semibold">Ingredients:</span> {ingradients}</p>
                 {/* {
@@ -48,7 +68,7 @@ const ViewDetails = () => {
                 <p><span className="text-black font-semibold">Review:</span> {riviews}</p>
             </div>
             <div className="flex justify-between">
-                <button onClick={()=>handleLike()} className="bg-green-500 px-10 py-3 rounded-md text-white font-bold">Like: {count}</button>
+                <button onClick={()=>handleLike()} className="bg-green-500 px-10 py-3 rounded-md text-white font-bold">Like: {likes}</button>
                 <button className="bg-green-500 px-10 py-3 rounded-md text-white font-bold">Meal Request</button>
             </div>
 			</div>
@@ -59,7 +79,26 @@ const ViewDetails = () => {
 </section>
         
         <div>
+            <div className="divider"></div>
             <h1 className="text-black font-bold text-4xl text-center">Review Section</h1>
+            <div className="divider"></div>
+        </div>
+        <div>
+            <form onSubmit={handleRiviewForm}>
+              <div>
+              <div className="flex justify-between">
+               <div className="">
+                <input name="riview" className="p-2 w-[900px] outline-none border-[1px] border-gray-400" type="text"  id="" placeholder="Riviews" />
+                </div>
+                <div>
+               <h1 className="bg-green-500 px-16 border-[1px] border-gray-400 py-2 text-white font-semibold">Riview Count: {riviewCount}</h1>
+                </div>
+               </div>
+               <div className="mt-4">
+                <button className="w-full py-2 bg-green-500 font-bold text-white">Riview Added</button>
+               </div>
+              </div>
+            </form>
         </div>
 
     </div>
