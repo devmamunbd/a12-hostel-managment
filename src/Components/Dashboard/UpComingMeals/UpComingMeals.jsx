@@ -76,9 +76,9 @@ const onSubmit = async (data) =>{
       ingradients: data.ingradients,
       description: data.description,
       price: parseFloat(data.price),
-      rating: data.rating,
+      rating: parseFloat(data.rating),
       post_time: data.post_time,
-      likes: data.likes,
+      likes: parseInt(data.likes),
       riviews: data.riviews,
       admin_name: name,
       admin_email: email

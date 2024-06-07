@@ -88,7 +88,7 @@ const ViewDetails = () => {
               <div>
               <div className="flex justify-between">
                <div className="">
-                <input name="riview" className="p-2 w-[900px] outline-none border-[1px] border-gray-400" type="text"  id="" placeholder="Riviews" />
+                <textarea className="p-2 w-[900px] outline-none border-[1px] border-gray-400" name="riview" id="" cols="" rows="2" placeholder="Riviews"></textarea>
                 </div>
                 <div>
                <h1 className="bg-green-500 px-16 border-[1px] border-gray-400 py-2 text-white font-semibold">Riview Count: {riviewCount}</h1>

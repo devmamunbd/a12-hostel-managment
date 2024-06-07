@@ -24,6 +24,8 @@ import UpComingMeals from "../Dashboard/UpComingMeals/UpComingMeals";
 import AdminRoutes from "./AdminRoutes";
 import UpdateMeal from "../Dashboard/UpdateMeal/UpdateMeal";
 import PackageDetails from "../../Home/Home/PackageDetails/PackageDetails";
+import CheckOut from "../Dashboard/CheckOut/CheckOut";
+import Payment from "../Payment/Payment";
 
 
 export const router = new createBrowserRouter([
@@ -65,7 +67,18 @@ export const router = new createBrowserRouter([
         path: '/packageDetails/:id',
         element: <PackageDetails></PackageDetails>,
         loader: ({params})=> fetch(`http://localhost:1000/packageDetails/${params.id}`)
-      }
+      },
+      {
+        path: 'checkout/:package',
+        element: <CheckOut></CheckOut>,
+        loader: ({params})=> fetch(`http://localhost:1000/packageDetails/${params.package}`)
+      },
+      {
+        path: '/payment/:package',
+        element: <Payment></Payment>,
+        loader: ({params})=> fetch(`http://localhost:1000/packageDetails/${params.package}`)
+      },
+     
       ]
     },
     {
@@ -91,12 +104,13 @@ export const router = new createBrowserRouter([
           element: <PrivateRoutes> <PaymentHistory></PaymentHistory></PrivateRoutes>
         },
        
+       
 
 
         //admin dashboard
         {
           path: 'adminprofile',
-          element: <AdminProfile></AdminProfile>
+          element: <AdminRoutes><AdminProfile></AdminProfile></AdminRoutes>
         },
         {
           path: 'manageusers',
@@ -104,27 +118,27 @@ export const router = new createBrowserRouter([
         },
         {
           path: 'addmeal',
-          element: <AddMeal></AddMeal>
+          element: <AdminRoutes><AddMeal></AddMeal></AdminRoutes>
         },
         {
           path: 'allmeal',
-          element: <AllMeal></AllMeal>
+          element: <AdminRoutes><AllMeal></AllMeal></AdminRoutes>
         },
         {
           path: 'allriview',
-          element: <AllRiview></AllRiview>
+          element: <AdminRoutes><AllRiview></AllRiview></AdminRoutes>
         },
         {
           path: 'servemeal',
-          element: <ServeMeal></ServeMeal>
+          element: <AdminRoutes><ServeMeal></ServeMeal></AdminRoutes>
         },
         {
           path: 'upcomingmeals',
-          element: <UpComingMeals></UpComingMeals>
+          element: <AdminRoutes><UpComingMeals></UpComingMeals></AdminRoutes>
         },
         {
           path:'upadeMeal/:id',
-          element: <UpdateMeal></UpdateMeal>,
+          element: <AdminRoutes><UpdateMeal></UpdateMeal></AdminRoutes>,
           loader: ({params}) => fetch(`http://localhost:1000/mealsUpdate/${params.id}`)
         }
       ]

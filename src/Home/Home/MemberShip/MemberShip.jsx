@@ -14,7 +14,7 @@ const MemberShip = () => {
 		}
 	})
 
-	console.log(items)
+	// console.log(items)
 
   return (
     <div className="mt-10">
@@ -25,7 +25,8 @@ const MemberShip = () => {
 		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 			{
 				items.map(item =>
-					<div key={item} className="flex w-full bg-[#A78BFA] text-black mb-8 sm:px-4 lg:mb-0">
+					<div 
+					key={item} className="flex w-full bg-[#ffffff] text-black mb-8 sm:px-4 lg:mb-0">
 				<div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-violet-600 dark:text-gray-50">
 					<div className="space-y-2">
 						<h4 className="text-2xl font-bold">{item.package}</h4>
@@ -66,7 +67,7 @@ const MemberShip = () => {
 							<span>{item.featuresFive}</span>
 						</li>
 					</ul>
-					<Link to={`/packageDetails/${item._id}`}>
+					<Link to={`/checkout/${item.package}`}>
 					<a rel="noopener noreferrer" href="#" className="inline-block w-full px-5 py-3 font-bold tracking-wider text-center
 					 rounded bg-black text-white dark:bg-gray-100 dark:text-violet-600">Package Details</a>
 					</Link>
