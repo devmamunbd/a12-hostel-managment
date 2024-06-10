@@ -51,7 +51,7 @@ const Register = () => {
       }
     
   return (
-    <div className="px-10 py-5 bg-white shadow-xl border border-gray-300 w-[400px] h-[530px] mx-auto">
+    <div className="px-4 md:px-10 py-5 bg-white shadow-xl border border-gray-300 w-[300px] md:w-[400px] h-[530px] mx-auto">
         <h1 className="text-center text-black font-bold text-2xl">Register Please</h1>
         <div className="mt-10">
 

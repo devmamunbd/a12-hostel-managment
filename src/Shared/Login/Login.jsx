@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form"
 import { Link, useNavigate } from "react-router-dom"
 import useAuth from "../../hooks/useAuth/useAuth";
 import Swal from "sweetalert2";
-import { useState } from "react";
 import useAxiosPublic from "../../hooks/useAxiosPublic/useAxiosPublic";
 
 
@@ -40,6 +39,7 @@ const Login = () => {
     googleLogin()
     .then((result)=> {
       console.log(result.user)
+      navigate('/')
       const userInfo = {
         name: result?.user?.displayName,
         email: result?.user?.email,
@@ -48,7 +48,6 @@ const Login = () => {
       axiosPublic.post('/users', userInfo)
       .then(res => {
         console.log(res.data)
-        navigate('/')
       })
     })
     .catch(error => {
@@ -57,7 +56,7 @@ const Login = () => {
   }
 
   return (
-    <div className="px-10 py-5 bg-white shadow-xl border border-gray-300 w-[400px] h-[500px] mx-auto">
+    <div className="px-4 md:px-10 py-5 bg-white shadow-xl border border-gray-300 w-[300px] md:w-[400px] h-[500px] mx-auto">
     <h1 className="text-center text-black font-bold text-2xl">Login Please</h1>
     <div className="mt-10">
 

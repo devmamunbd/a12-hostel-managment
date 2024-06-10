@@ -33,7 +33,11 @@ const PaymentHistory = () => {
       </tr>
     </thead>
     <tbody>
-      { 
+
+
+      {items?.length >0  ?
+        <>
+        { 
         items?.map((item, index)=> <tr key={item._id}>
         <th>{index+1}</th>
         <td>{item.name}</td>
@@ -42,8 +46,13 @@ const PaymentHistory = () => {
         <td>{item.transactionId}</td>
       </tr>
       ) 
-
       }
+        </> : 
+        <div  className="top-12 left-48 text-lg md:text-3xl text-black font-bold">
+        <p className="text-center">Not Payment Yet</p>
+        </div>
+      }
+      
       
     </tbody>
   </table>

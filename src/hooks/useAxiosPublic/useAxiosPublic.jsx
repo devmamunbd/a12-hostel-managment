@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 const axiosPublic = axios.create({
-    baseURL: 'http://localhost:1000',
+    baseURL: 'https://assignment-server-fawn.vercel.app',
 })
 
 const useAxiosPublic = () => {

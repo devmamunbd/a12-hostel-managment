@@ -45,6 +45,7 @@ const AuthProvider = ({children}) => {
 
     //logOut
     const logOut=()=> {
+      setUser(null)
       setLoading(true)
       return signOut(auth)
     }
@@ -66,6 +67,7 @@ const AuthProvider = ({children}) => {
           localStorage.removeItem('accessToken')
         }
         setLoading(false)
+        
       });
       return()=> {
         return unSubscribe()

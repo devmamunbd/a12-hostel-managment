@@ -61,22 +61,22 @@ export const router = new createBrowserRouter([
        {
         path: '/details/:id',
         element: <ViewDetails></ViewDetails>,
-        loader: ({params})=> fetch(`http://localhost:1000/details/${params.id}`)
+        loader: ({params})=> fetch(`https://assignment-server-fawn.vercel.app/details/${params.id}`)
        },
        {
         path: '/packageDetails/:id',
         element: <PackageDetails></PackageDetails>,
-        loader: ({params})=> fetch(`http://localhost:1000/packageDetails/${params.id}`)
+        loader: ({params})=> fetch(`https://assignment-server-fawn.vercel.app/packageDetails/${params.id}`)
       },
       {
         path: 'checkout/:package',
         element: <CheckOut></CheckOut>,
-        loader: ({params})=> fetch(`http://localhost:1000/packageDetails/${params.package}`)
+        loader: ({params})=> fetch(`https://assignment-server-fawn.vercel.app/packageDetails/${params.package}`)
       },
       {
         path: '/payment/:package',
         element: <Payment></Payment>,
-        loader: ({params})=> fetch(`http://localhost:1000/packageDetails/${params.package}`)
+        loader: ({params})=> fetch(`https://assignment-server-fawn.vercel.app/packageDetails/${params.package}`)
       },
      
       ]
@@ -139,7 +139,7 @@ export const router = new createBrowserRouter([
         {
           path:'upadeMeal/:id',
           element: <AdminRoutes><UpdateMeal></UpdateMeal></AdminRoutes>,
-          loader: ({params}) => fetch(`http://localhost:1000/mealsUpdate/${params.id}`)
+          loader: ({params}) => fetch(`https://assignment-server-fawn.vercel.app/mealsUpdate/${params.id}`)
         }
       ]
     }
