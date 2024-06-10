@@ -5,11 +5,13 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure/useAxiosSecure"
 import useCart from "../../../hooks/useCart/useCart"
 
 const AdminProfile = () => {
-  const {user} = useAuth()
+  const {user, loading} = useAuth()
+  // console.log(loading)
   const axiosSecure = useAxiosSecure()
   const [carts] = useCart()
   const {data: item=[]}= useQuery({
     queryKey: ['item'],
+    // enabled: !loading && !!user?.email,
     queryFn: async()=> {
       const res = await axiosSecure.get(`/adminUsers/${user?.email}`)
       return res.data
