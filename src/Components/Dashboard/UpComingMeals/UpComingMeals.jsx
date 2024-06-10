@@ -23,6 +23,9 @@ const UpComingMeals = () => {
       return res.data
     }
   })
+
+
+  const upComing = upMeal?.sort((a,b)=> (b.likes) - (a.likes))
  
   
 const handlePublishButton=(meal)=> {
@@ -195,18 +198,20 @@ const onSubmit = async (data) =>{
         <th>Category</th> 
         <th>Desciption</th> 
         <th>Post Time</th> 
+        <th>Likes</th> 
         <th>Price</th> 
         <th>Action</th>
       </tr>
     </thead> 
     <tbody>
      {
-      upMeal?.map((meal, index)=>  <tr key={meal._id}>
+      upComing?.map((meal, index)=>  <tr key={meal._id}>
       <th>{index+1}</th> 
       <td>{meal?.title}</td> 
       <td>{meal?.category}</td> 
       <td>{meal?.description}</td> 
       <td>{new Date(meal?.post_time).toLocaleString()}</td> 
+      <td>{meal?.likes}</td> 
       <td>${meal?.price}</td> 
       <td><button
       onClick={()=>handlePublishButton(meal)}

@@ -29,6 +29,7 @@ const AddMeal = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm()
 
@@ -52,17 +53,19 @@ const AddMeal = () => {
         price: parseFloat(data.price),
         rating: parseFloat(data.rating),
         post_time: data.post_time,
-        likes: parseInt.apply(data.likes),
+        likes: parseInt(data.likes),
         riviews: data.riviews,
+        riviewCount: parseInt(0),
         admin_name: name,
         admin_email: email
       }
         
         // console.log(mealsInfo)
-        axiosPublic.post('/allmeals', mealsInfo)
+        axiosSecure.post('/allmeals', mealsInfo)
         .then(res => {
           console.log(res.data)
           if (res.data.insertedId) {
+            reset()
             Swal.fire({
               position: "center",
               icon: "success",

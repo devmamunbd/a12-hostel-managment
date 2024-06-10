@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { Link, Outlet } from "react-router-dom"
+import { Link, NavLink, Outlet } from "react-router-dom"
 import useAdmin from "../../hooks/useAdmin/useAdmin";
 
 const Dashboard = () => {
@@ -7,33 +7,66 @@ const Dashboard = () => {
     const [isAdmin] = useAdmin();
 
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
 
         {/* dashboard-sidebar */}
-        <div className="w-64 min-h-screen bg-blue-600 list-none px-6 py-5 text-white">
+        <div className="w-full md:w-64 min-h-screen bg-black list-none px-6 py-5 text-white">
            <ul className="p-4 space-y-4">
             {
                 isAdmin ?
                 <>
                   <li> 
-            <Link className="mb-5" to="/dashboard/adminprofile">
-            Admin Profile</Link>
+            <NavLink className={({isActive}) =>
+            isActive ?  "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :
+            "flex items-center hover:text-blue-500 transition-colors"
+            } to="/dashboard/adminprofile">
+            Admin Profile</NavLink>
            </li>
-           <li> <Link className="mb-5" to="/dashboard/manageusers">Manage Users</Link></li>
-           <li> <Link className="mb-5" to="/dashboard/addmeal">Add Meal</Link></li>
-           <li> <Link className="mb-5" to="/dashboard/allmeal">All Meal</Link></li>
-           <li> <Link className="mb-5" to="/dashboard/allriview">All Riview</Link></li>
-           <li> <Link className="mb-5" to="/dashboard/servemeal">Serve Meal</Link></li>
-           <li> <Link className="mb-5" to="/dashboard/upcomingmeals">Upcoming Meals</Link></li>
+           <li> <NavLink 
+           className={({isActive})=> 
+           isActive ? "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :"flex items-center hover:text-blue-500 transition-colors" 
+           } to="/dashboard/manageusers">Manage Users</NavLink></li>
+           <li> <NavLink 
+            className={({isActive})=> 
+              isActive ? "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :"flex items-center hover:text-blue-500 transition-colors" 
+              } to="/dashboard/addmeal">Add Meal</NavLink></li>
+           <li> <NavLink 
+            className={({isActive})=> 
+              isActive ? "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :"flex items-center hover:text-blue-500 transition-colors" 
+              } to="/dashboard/allmeal">All Meal</NavLink></li>
+           <li> <NavLink 
+           className={({isActive})=> 
+            isActive ? "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :"flex items-center hover:text-blue-500 transition-colors" 
+            } to="/dashboard/allriview">All Riview</NavLink></li>
+           <li> <NavLink 
+           className={({isActive})=> 
+            isActive ? "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :"flex items-center hover:text-blue-500 transition-colors" 
+            } to="/dashboard/servemeal">Serve Meal</NavLink></li>
+           <li> <NavLink 
+            className={({isActive})=> 
+              isActive ? "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :"flex items-center hover:text-blue-500 transition-colors" 
+              }to="/dashboard/upcomingmeals">Upcoming Meals</NavLink></li>
                 </> : 
                 <>
                   <li> 
-            <Link className="mb-5" to="/dashboard/myprofile">
-            My Profile</Link>
+            <NavLink 
+             className={({isActive})=> 
+              isActive ? "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :"flex items-center hover:text-blue-500 transition-colors" 
+              } to="/dashboard/myprofile">
+            My Profile</NavLink>
            </li>
-           <li> <Link className="mb-5" to="/dashboard/requestmeals">Request Meals</Link></li>
-           <li> <Link className="mb-5" to="/dashboard/myreview">My Review</Link></li>
-           <li> <Link className="mb-5" to="/dashboard/paymenthistory">Payment History</Link></li>
+           <li> <NavLink  className={({isActive})=> 
+           isActive ? "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :"flex items-center hover:text-blue-500 transition-colors" 
+           }
+            to="/dashboard/requestmeals">Request Meals</NavLink></li>
+           <li> <NavLink  className={({isActive})=> 
+           isActive ? "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :"flex items-center hover:text-blue-500 transition-colors" 
+           }
+            to="/dashboard/myreview">My Review</NavLink></li>
+           <li> <NavLink  className={({isActive})=> 
+           isActive ? "border-[1px] px-6 py-2 rounded-md border-green-500 text-green-500 font-bold" :"flex items-center hover:text-blue-500 transition-colors" 
+           }
+            to="/dashboard/paymenthistory">Payment History</NavLink></li>
                 </>
             }
            
@@ -44,7 +77,7 @@ const Dashboard = () => {
 
 
             {/* always visible */}
-           <div className="divider"></div>
+           <div className="divider bg-white h-1"></div>
            <li> <Link className="mb-5" to="/">Home</Link></li>
            </ul>
         </div>

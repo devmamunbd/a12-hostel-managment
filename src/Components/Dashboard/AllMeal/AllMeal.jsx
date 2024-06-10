@@ -5,16 +5,18 @@ import { MdDelete } from "react-icons/md"
 import { FaRegEdit } from "react-icons/fa"
 import Swal from "sweetalert2"
 import { FcViewDetails } from "react-icons/fc"
+import useAxiosSecure from "../../../hooks/useAxiosSecure/useAxiosSecure"
 
 
 const AllMeal = () => {
 
   const axiosPulic = useAxiosPublic()
+  const axiosSecure = useAxiosSecure()
 
   const {data: allMeals=[], refetch}= useQuery({
     queryKey: ['allMeals'],
     queryFn: async()=> {
-      const res = await axiosPulic.get('/adminAllMeals')
+      const res = await axiosSecure.get('/adminAllMeals')
       return res.data
     }
     
@@ -66,6 +68,7 @@ const AllMeal = () => {
       <tr>
         <th>#</th> 
         <th>Title</th> 
+        <th>Likes</th> 
         <th>Riviews</th> 
         <th>Admin Name</th> 
         <th>Update</th> 
@@ -77,8 +80,9 @@ const AllMeal = () => {
       {
         allmeals.map((meal, index)=> <tr key={meal._id}>
         <th>{index+1}</th> 
-        <td>{meal.title}</td> 
-        <td>{meal.riviews}</td> 
+        <td>{meal?.title}</td> 
+        <td>{meal?.likes}</td> 
+        <td>{meal?.riviews}</td> 
         <td>{meal?.admin_name?.name}</td> 
 
         <td><Link to={`/dashboard/upadeMeal/${meal._id}`}><button className="btn bg-slate-200">

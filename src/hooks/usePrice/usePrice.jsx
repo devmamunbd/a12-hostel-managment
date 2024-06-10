@@ -4,7 +4,7 @@
 // const usePrice = () => {
 //     const axiosPublic = useAxiosPublic()
 
-//     const {data: packs=[]}= useQuery({
+//     const {data: packs=[], refetch}= useQuery({
 //         queryKey: ['packs'],
 //         queryFn: async()=> {
 //             const res = await axiosPublic.get('/packagePrice')
@@ -13,7 +13,7 @@
 //         // return []
 //     })
 //     // console.log(packs)
-//     return [packs]
+//     return [packs, refetch]
 
 // }
 
