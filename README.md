@@ -19,3 +19,12 @@
   
 
 # Live Site URL: https://assignment-twelve-bcddd.web.app/
+
+
+# if you clone my GitHub project please follow this step
+- open your folder and terminal
+- git clone https://github.com/username/project-name.git
+- cd project-name
+- npm install
+- environment setup
+- npm run dev
