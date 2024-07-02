@@ -3,6 +3,9 @@
 # Admin Information
 - UserName: mamunahmed@gmail.com
 - Password: mamunahmed
+
+# Project Overview
+It is a hostel management company. Here we rent rooms for students and arrange their stay and food. There are also various amenities.
   
 # Features
 - It is a Hostel Management Platform, we rents hostels to students.
@@ -20,6 +23,8 @@
 
 # Live Site URL: https://assignment-twelve-bcddd.web.app/
 
+# Technology Used
+- HTML, CSS, Tailwind, JavaScript, React JS, Node.js, Express.JS, MongoDB
 
 # if you clone my GitHub project please follow this step
 - open your folder and terminal
